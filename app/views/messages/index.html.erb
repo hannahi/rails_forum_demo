@@ -1,0 +1,22 @@
+<!-- Main index page for root_path. -->
+<div class="row">
+  <h2>Messages</h2>
+  <div class="message-container">
+    <ul id="messages">
+      <!-- Render _message.html.erb for each message. Reverse the order
+      to show the most resent message on top. -->
+      <%= render :partial => @messages.reverse %>
+    </ul>
+  </div>
+  <div class="add-message-container">
+    <!-- If current_user is set show new message form else link to sign up or log in -->
+    <% if current_user %>
+        <h3>Add new message</h3>
+        <%= render 'form' %>
+    <% else %>
+        <p>
+            <%= link_to "Log in", log_in_path %> (or <%= link_to "sign up", sign_up_path %>) to join the fun!
+        </p>
+    <% end %>
+  </div>
+</div>

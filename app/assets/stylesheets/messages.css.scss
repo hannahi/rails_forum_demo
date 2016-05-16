@@ -1,0 +1,36 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.top-bar-text {
+  color: #ffffff;
+}
+
+.small-8 {
+  background-color: #F0F0F0;
+}
+
+ul#messages {
+  list-style-type: none;
+}
+
+.columns {
+  padding: 10px;
+}
+
+.columns.button-container{
+  padding: 5px 0px 0px;
+}
+
+.row {
+  padding: 5px;
+}
+
+.message-container {
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x:hidden;
+}
+
+.add-message-container {
+  padding-top: 20px;
+}

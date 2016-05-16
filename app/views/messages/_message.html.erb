@@ -1,0 +1,23 @@
+<!--This view is rendered for each message.-->
+<div class="row">
+  <div class="small-2 columns"><%= message.user.email %> wrote:</div>
+  <div class="small-8 columns"><%= message.content %></div>
+  <div class="small-1 columns"><%= message.ratings.count %> points</div>
+  <div class="small-1 columns button-container">
+    <!--Display vote/unvote buttons if current_user is set (user is logged in)-->
+    <% if current_user %>
+        <!--
+        Show unvote button if current_user has voted for this message, OR
+        Show vote button if current_user has not voted for this message yet.
+        -->
+        <% if rating = current_user.ratings.find_by(message_id: message.id) %>
+            <%= button_to "-1", rating_path(rating.id, :message_id => message.id), :method => :delete, :remote => true, :class => "button tiny button-vote" %>
+        <% else %>
+            <%= button_to "+1", ratings_path(:message_id => message.id), :method => :post, :remote => true, :class => "button tiny button-vote" %>
+        <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+

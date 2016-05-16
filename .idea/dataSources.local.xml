@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails rails_messenger: development" uuid="870b7370-0c16-4704-b766-74f3386f5723">
+      <secret-storage>memory</secret-storage>
+    </data-source>
+    <data-source name="Rails rails_messenger: test" uuid="5ec074eb-2dd8-4816-984e-11481e4ba84a">
+      <secret-storage>memory</secret-storage>
+    </data-source>
+  </component>
+</project>

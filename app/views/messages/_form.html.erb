@@ -1,0 +1,9 @@
+<!--Form for entering a new message.-->
+<%= form_for(@message, remote: true) do |f| %>
+  <div class="area">
+    <%= f.text_area :content, :placeholder => "Enter your message here" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit", :class => "button tiny" %>
+  </div>
+<% end %>

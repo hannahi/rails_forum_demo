@@ -1,0 +1,4 @@
+// JavaScript file to handle response from ratings_controller when new rating has been made.
+// Re-render all messages to update the message list with new rating.
+// TODO: Only re-render specific message for which the rating was made.
+$("#messages").html("<%= escape_javascript(render :partial => @messages.reverse) %>");

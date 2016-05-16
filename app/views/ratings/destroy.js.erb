@@ -1,0 +1,4 @@
+// JavaScript file to handle response from ratings_controller when a rating has been destroyed.
+// Re-render all messages to update the message list with removed rating.
+// TODO: Only re-render specific message for which the rating was destroyed.
+$("#messages").html("<%= escape_javascript(render :partial => @messages.reverse) %>");

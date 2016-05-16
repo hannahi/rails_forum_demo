@@ -1,0 +1,13 @@
+<!-- View to show current_user's messages. -->
+<div class="row">
+    <h2>Sent messages</h2>
+    <ul id="messages">
+      <!-- for each of current_user's messages... -->
+      <% for message in current_user.messages %>
+          <li>
+            <div class="small-10 columns"><%= message.content %></div>
+            <div class="small-2 columns"><%= message.ratings.count %> points</div>
+          </li>
+      <% end %>
+    </ul>
+</div>

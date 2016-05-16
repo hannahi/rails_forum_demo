@@ -1,0 +1,4 @@
+$("#messages").html("<%= escape_javascript(render :partial => @messages.reverse) %>");
+
+document.getElementById("message_content").value = "";
+document.getElementById("message_content").focus();
